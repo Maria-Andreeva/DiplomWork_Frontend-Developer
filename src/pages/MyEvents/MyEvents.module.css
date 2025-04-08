@@ -1,0 +1,262 @@
+/* Стиль для вкладок */
+.viewTabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.viewTab {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.viewTab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filterBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+    background-color: #e5e7eb;
+}
+
+.active {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.addBtn {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.addBtn:hover {
+    background-color: #059669;
+}
+
+.loader {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.eventCard {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eventCard h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.eventCard p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.commentBox {
+    min-height: 60px;
+    resize: vertical;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.9rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.editBtn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.editBtn:hover {
+    background-color: #2563eb;
+}
+
+.deleteBtn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.deleteBtn:hover {
+    background-color: #dc2626;
+}
+
+/* Модальное окно: оформление в стиле bookingContainer */
+.modal {
+    max-width: 500px;
+    margin: 100px auto 30px auto; /* Верхний отступ 100px, центрирование по горизонтали, отступ снизу 30px */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Фоновой оверлей для модального окна */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок модального окна */
+.modal h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Группа для каждого поля ввода */
+.inputGroup {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для полей ввода, как в bookingContainer */
+.inputField {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Для текстовых полей при фокусе */
+.inputField:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Увеличенное поле для комментария */
+.textareaField {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    resize: vertical;
+    min-height: 200px; /* Поле комментария больше */
+}
+
+.textareaField:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Обертка для кнопок в модальном окне */
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Кнопки модального окна, как в bookingContainer */
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Для кнопок внутри обёртки (если требуется ширина не 100%) */
+.modalButtons .button {
+    width: auto;
+}

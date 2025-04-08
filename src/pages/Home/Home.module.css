@@ -1,0 +1,65 @@
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f4f8;
+    color: #333;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcomeHeading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4b5563;
+}
+
+.loadingText {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    margin-top: 20px;
+}
+
+.noMeetings {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    margin-top: 20px;
+}
+
+.notification {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

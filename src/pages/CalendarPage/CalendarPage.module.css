@@ -1,0 +1,32 @@
+.calendarPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calendarContainer {
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fc {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+
+.fc-daygrid-week-day {
+    width: calc(100% / 7);
+}
+
+@media (max-width: 768px) {
+    .fc-daygrid-day-number {
+        font-size: 12px;
+    }
+}
