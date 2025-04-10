@@ -28,7 +28,7 @@ const Navbar = () => {
                 {user && <li><Link to="/calendar" className={styles.navLink}>Календарь</Link></li>}
                 {user && <li><Link to="/booking" className={styles.navLink}>Бронирование</Link></li>}
                 {user && <li><Link to="/profile" className={styles.navLink}>Профиль</Link></li>}
-                {user && <li><Link to="/register" className={styles.navLink}>Регистрация</Link></li>}
+                <li><Link to="/register" className={styles.navLink}>Регистрация</Link></li>
                 <li><Link to="/login" className={styles.navLink}>Вход</Link></li>
             </ul>
         </nav>
