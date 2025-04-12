@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 🎓 DiplomWork_Frontend-Developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Финальный проект по курсу **Frontend-разработчик**.  
+Приложение для планирования и управления встречами с использованием React, Firebase и календаря FullCalendar.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=000000)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![FullCalendar](https://img.shields.io/badge/FullCalendar-3788d8?style=for-the-badge)
 
-In the project directory, you can run:
+# 📅 Meeting Scheduler App
 
-### `npm start`
+##  📌 Описание
+Это веб-приложение для планирования, отслеживания и управления личными или деловыми встречами. С помощью интуитивно понятного интерфейса и интеграции с Firebase пользователи могут легко бронировать встречи, просматривать их в календаре, а также добавлять комментарии к событиям.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Возможности
 
-### `npm test`
+- 🔐 Регистрация и авторизация пользователей
+- ➕ Создание, редактирование и удаление встреч
+- 📆 Календарный интерфейс (FullCalendar)
+- 🕒 Просмотр предстоящих и прошедших встреч
+- 💬 Комментарии к событиям
+- 🔔 Уведомления
+- 🎨 Адаптивный интерфейс с использованием Tailwind CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧭 Навигация по проекту
+```
+/src 
+├── /components # Повторно используемые компоненты 
+│ ├── CalendarComponent.jsx # Компонент календаря (FullCalendar) 
+│ ├── Notification.jsx # Компонент уведомлений 
+│ ├── Button.jsx # Общая кнопка 
+│ ├── InputField.jsx # Общее поле ввода 
+│ └── Navbar.jsx # Навигационная панель
+├── /pages # Страницы приложения 
+│ ├── /Home 
+│ │ ├── Home.jsx # Главная страница 
+│ │ └── Home.module.css # Стили 
+│ ├── /Calendar 
+│ │ ├── CalendarPage.jsx # Календарь встреч 
+│ │ └── CalendarPage.module.css 
+│ ├── /Booking 
+│ │ ├── BookingPage.jsx # Страница создания встречи 
+│ │ └── BookingPage.module.css 
+│ ├── /Login 
+│ │ ├── Login.jsx # Вход 
+│ │ └── Login.module.css 
+│ ├── /Register 
+│ │ ├── Register.jsx # Регистрация 
+│ │ └── Register.module.css 
+│ ├── /Profile 
+│ │ ├── Profile.jsx # Профиль пользователя 
+│ │ └── Profile.module.css
+│ └── /MyEvents 
+│ ├── MyEvents.jsx # Список всех событий 
+│ └── MyEvents.module.css
+├── /services # Работа с Firebase 
+│ ├── firebase.jsx # Конфигурация Firebase 
+│ ├── authService.jsx # Аутентификация 
+│ └── meetingService.jsx # CRUD-функции для встреч
+├── /context # React Context API 
+│ ├── AuthContext.jsx # Контекст авторизации 
+│ └── MeetingContext.jsx # Контекст встреч
+├── /styles # Глобальные и модульные стили 
+│ ├── globals.css 
+│ ├── tailwind.config.js 
+│ ├── Calendar.module.css
+│ ├── Button.module.css 
+│ ├── Input.module.css 
+│ └── Navbar.module.css
+├── /hooks # Кастомные хуки 
+│ └── useMeetings.jsx # Хук работы со встречами
+├── App.js # Основной компонент приложения 
+└── index.js # Точка входа
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Установка и запуск
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Клонируйте репозиторий:
 
-### `npm run eject`
+```bash
+git clone https://github.com/your-username/meeting-scheduler.git
+cd meeting-scheduler
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Установите зависимости:
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Создайте **.env** файл в корне проекта и вставьте туда данные из Firebase:
+```
+VITE_FIREBASE_API_KEY=ваш_ключ
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+4. Запустите локальный сервер:
+```
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Используемые технологии
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React** – библиотека для создания пользовательских интерфейсов
+- **React Router** – маршрутизация между страницами
+- **Firebase** – аутентификация и база данных
+- **Tailwind CSS** – стилизация компонентов
+- **FullCalendar** – компонент календаря
+- **CSS Modules** – модульные стили
 
-## Learn More
+## 💡 Возможные улучшения
+```
+📲 Отправка напоминаний по почте
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔁 Повторяющиеся события
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧑‍🤝‍🧑 Делегирование встреч другим пользователям
 
-### Code Splitting
+📱 Улучшенная мобильная версия
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🛡️ Лицензия
+Этот проект не лицензирован. Все права защищены. Использование, копирование и распространение кода без письменного разрешения автора запрещено.
